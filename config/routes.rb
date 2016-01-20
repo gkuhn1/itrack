@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     member do
       put :update_token, defaults: { :format => :js }
     end
+
+    resources :contacts
   end
 
 end

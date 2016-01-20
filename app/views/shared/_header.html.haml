@@ -42,3 +42,5 @@
               = account.name
             %i.fa.fa-angle-left.pull-right
           %ul.treeview-menu
+            %li{class: controller_name == "contacts" ? "active" : ""}
+              = link_to_with_icon([Contact.model_name.human(count: 2), "fa fa-users"], account_contacts_path(account))

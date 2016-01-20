@@ -1,0 +1,15 @@
+.box
+
+  .box-body.no-padding
+
+    %p
+      %b Name:
+      = @contact.name
+    %p
+      %b Email:
+      = @contact.email
+
+
+    = link_to 'Edit', account_contacts_path(current_account, @contact)
+    \|
+    = link_to 'Back', account_contacts_path(current_account)

@@ -1,0 +1,34 @@
+/ Default box
+.box
+  .box-header
+    %h3.box-title= page_entries_info @contacts
+
+    .box-tools.pull-right
+      = paginate @contacts
+
+      .btn-group.pull-right
+        %a.btn.btn-sm.btn-success{href: new_account_contact_path(current_account)} Novo
+  / /.box-header
+  .box-body.no-padding
+    %table.table
+      %tbody
+        %tr
+          %th{class: "col-xs-1"} #
+          %th= t("simple_form.labels.contact.name")
+          %th= t("simple_form.labels.contact.email")
+
+          %th{class: "col-xs-1"} Ações
+
+        - @contacts.each do |contact|
+          %tr
+            %td= contact.id
+            %td
+              = link_to contact.name, account_contact_path(current_account, contact)
+            %td= contact.email
+
+            %td
+              %a{href: edit_account_contact_path(current_account, contact), class: "badge bg-yellow", title: "Editar"}
+                %i.fa.fa-pencil
+              = link_to account_contact_path(current_account, contact), method: :delete, class: "badge bg-red", title: "Excluir" do
+                %i.fa.fa-times
+  / /.box-body
