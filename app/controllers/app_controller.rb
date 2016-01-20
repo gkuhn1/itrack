@@ -6,12 +6,14 @@ class AppController < ApplicationController
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
-  http_basic_authenticate_with name: "admin", password: "pwd"
+  http_basic_authenticate_with name: ENV["itrack_login"], password: ENV["itrack_pwd"]
 
   respond_to :html
 
-  before_action :require_account, except: :index
-  before_action :set_breadcrumbs, except: :index
+  rescue_from NoAccountSelectedException, with: :render_forbidden
+
+  before_action :require_account
+  before_action :set_breadcrumbs
 
   private
 
@@ -24,7 +26,8 @@ class AppController < ApplicationController
       raise NoAccountSelectedException unless current_account
     end
 
-    def index
+    def render_forbidden
+      render text: "Forbidden", :status => 403
     end
 
 end

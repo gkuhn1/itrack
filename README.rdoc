@@ -25,6 +25,7 @@ If everything is ok, now you can run server
 
 1. `$ rails s` - Execute server
 2. Open [http://localhost:3000](http://localhost:3000)
+3. Default BasicAuthorization: admin:pwd
 
 #### Running specs and checking coverage
 

@@ -1,3 +1,6 @@
+ENV["itrack_login"] ||= "admin"
+ENV["itrack_pwd"] ||= "pwd"
+
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 

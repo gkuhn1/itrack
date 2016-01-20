@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
-  root 'app#index'
+  root 'accounts#index'
+
+  resources :accounts, except: :show do
+    member do
+      put :update_token, defaults: { :format => :js }
+    end
+  end
 
 end

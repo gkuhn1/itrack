@@ -34,3 +34,11 @@
     / sidebar menu: : style can be found in sidebar.less
     %ul.sidebar-menu
       %li.header ACCOUNT NAVIGATION
+      - Account.all.each do |account|
+        %li.treeview{class: (account == current_account ? "active" : "")}
+          %a{:href => "#"}
+            %i.fa.fa-pie-chart
+            %span
+              = account.name
+            %i.fa.fa-angle-left.pull-right
+          %ul.treeview-menu
