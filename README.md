@@ -1,7 +1,8 @@
 # iTrack
 
-{<img src="https://codeclimate.com/github/gkuhn1/itrack/badges/gpa.svg" />}[https://codeclimate.com/github/gkuhn1/itrack]
-{<img src="https://circleci.com/gh/gkuhn1/itrack/tree/master.svg?style=shield" />}
+[![Code Climate](https://codeclimate.com/github/gkuhn1/itrack/badges/gpa.svg)](https://codeclimate.com/github/gkuhn1/itrack)
+[![CircleCI status](https://circleci.com/gh/gkuhn1/itrack/tree/master.svg?style=shield)](https://circleci.com/gh/gkuhn1/itrack)
+
 
 This is a [Rails](http://rubyonrails.org/) application built to track user activity throw pages.
 
