@@ -36,21 +36,14 @@ gem "responders"
 
 gem 'haml', '~> 4.0.7'
 gem 'haml-rails'
-gem 'audited-activerecord', '~> 4.2'
 gem 'breadcrumbs_on_rails', '2.3.1'
 
 gem 'simple_form'
 gem 'kaminari'
 gem 'ransack', '~> 1.6.5'
-gem 'squeel', '~> 1.2'
 
 gem 'thin'
-gem 'sidekiq', '~> 4.0', '>= 4.0.2'
-gem 'sinatra', :require => nil
 
-gem "validate_url"
-
-gem 'apipie-rails', '0.3.5'
 gem 'rollbar', '2.7.1'
 
 group :development, :test do
@@ -68,10 +61,6 @@ group :development, :test do
   gem 'pry-nav',                   '0.2.4'
   gem 'pry-doc',                   '0.8.0'
 
-  gem 'vcr',                       '3.0.1', require: false
-  gem 'webmock',                   '1.22.6', require: false
-
-  # Geração de cpf/cnpj
   gem 'rspec-rails',               '3.4.0'
   gem 'rspec-activejob',           '~> 0.6.1', require: false
   gem 'factory_girl_rails',        '4.5.0'
