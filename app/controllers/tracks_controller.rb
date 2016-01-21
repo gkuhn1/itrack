@@ -27,8 +27,16 @@ class TracksController < ApplicationController
       params.require("track").permit(:publisher, :visitor_uid, :page, :page_title)
     end
 
+    def publisher_param
+      track_params[:publisher]
+    end
+
+    def visitor_param
+      track_params[:visitor_uid]
+    end
+
     def current_account
-      @current_account ||= Account.find_by(token: track_params[:publisher])  if track_params[:publisher]
+      @current_account ||= Account.find_by(token: publisher_param)  if publisher_param
     end
     helper_method :current_account
 
@@ -37,7 +45,7 @@ class TracksController < ApplicationController
     end
 
     def find_or_create_contact
-      @contact = current_account.contacts.find_or_create_by(identifier: track_params[:visitor_uid])
+      @contact = current_account.contacts.find_or_create_by(identifier: visitor_param)
     end
 
 end

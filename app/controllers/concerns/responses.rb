@@ -11,7 +11,7 @@ module Responses
     end
 
     def account_not_found
-      render json: { error: "Publisher not found with token %s" % track_params[:publisher] }, status: 400
+      render json: { error: "Publisher not found with token %s" % publisher_param }, status: 400
     end
 
     def unprocessable_entity(message = "Unprocessable Entity")

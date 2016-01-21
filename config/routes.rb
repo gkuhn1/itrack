@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   end
 
   resources :tracks, only: :create
+  resources :messages, only: :create
 
 end

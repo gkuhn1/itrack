@@ -21,16 +21,33 @@
 
   .box-body.no-padding
 
-    %ul.timeline
-      - @contact.tracks.each do |track|
-        %li
-          %i.fa.fa-eye.bg-blue
-          .timeline-item
-            %span.time
-              %i.fa.fa-clock-o
-              = l(track.created_at, format: :short)
-            %h3.timeline-header
-              %a{href: track.page}= track.page_title
-            .timeline-body
-              = track.page
-        / END timeline item
+    .col-md-6
+      %h3 Tracks
+      %ul.timeline
+        - @contact.tracks.each do |track|
+          %li
+            %i.fa.fa-eye.bg-green
+            .timeline-item
+              %span.time
+                %i.fa.fa-clock-o
+                = l(track.created_at, format: :short)
+              %h3.timeline-header
+                %a{href: track.page}= track.page_title
+              .timeline-body
+                = track.page
+          / END timeline item
+
+    .col-md-6
+      %h3 Messages
+      %ul.timeline
+        - @contact.messages.each do |message|
+          %li
+            %i.fa.fa-envelope-o.bg-blue
+            .timeline-item
+              %span.time
+                %i.fa.fa-clock-o
+                = l(message.created_at, format: :short)
+              .timeline-body
+                = message.body
+          / END timeline item
+
