@@ -3,7 +3,7 @@ class ContactsController < AppController
 
   # GET /contacts
   def index
-    @contacts = Contact.all
+    @contacts = collection
     respond_with(@contacts)
   end
 
@@ -45,11 +45,15 @@ class ContactsController < AppController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_contact
-      @contact = Contact.find(params[:id])
+      @contact = collection.find(params[:id])
+    end
+
+    def collection
+      current_account.contacts
     end
 
     # Only allow a trusted parameter "white list" through.
     def contact_params
-      params.require(:contact).permit(:name, :email).merge(account_id: current_account.id)
+      params.require(:contact).permit(:name, :email, :identifier).merge(account_id: current_account.id)
     end
 end

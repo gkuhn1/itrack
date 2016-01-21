@@ -10,4 +10,4 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-Rails.application.config.assets.precompile += %w( dist/img/user2-160x160.jpg )
+Rails.application.config.assets.precompile += %w( iTrackClient.js dist/img/user2-160x160.jpg )

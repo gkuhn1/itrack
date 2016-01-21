@@ -16,6 +16,7 @@
           %th{class: "col-xs-1"} #
           %th= t("simple_form.labels.contact.name")
           %th= t("simple_form.labels.contact.email")
+          %th= t("simple_form.labels.contact.identifier")
 
           %th{class: "col-xs-1"} Ações
 
@@ -25,6 +26,7 @@
             %td
               = link_to contact.name, account_contact_path(current_account, contact)
             %td= contact.email
+            %td= contact.identifier
 
             %td
               %a{href: edit_account_contact_path(current_account, contact), class: "badge bg-yellow", title: "Editar"}

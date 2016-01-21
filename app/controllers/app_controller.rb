@@ -1,5 +1,3 @@
-class NoAccountSelectedException < RuntimeError; end
-
 class AppController < ApplicationController
   include Breadcrumbs
   # Prevent CSRF attacks by raising an exception.

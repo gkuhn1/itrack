@@ -10,4 +10,6 @@ Rails.application.routes.draw do
     resources :contacts
   end
 
+  resources :tracks, only: :create
+
 end

@@ -4,6 +4,9 @@ class Account < ActiveRecord::Base
 
   before_validation :ensure_authentication_token
 
+  has_many :contacts
+  has_many :tracks
+
   private
     def ensure_authentication_token
       if token.blank?

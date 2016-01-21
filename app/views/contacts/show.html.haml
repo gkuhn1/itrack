@@ -1,6 +1,13 @@
 .box
 
-  .box-body.no-padding
+  .box-header
+
+    .pull-right
+
+
+    .box-tools.pull-right
+      = link_to account_contact_path(current_account, @contact), method: :delete, class: "btn btn-box-tool", title: "Delete contact", data: {confirm: "Confirm destroy contact?"} do
+        %i.fa.fa-trash
 
     %p
       %b Name:
@@ -8,8 +15,22 @@
     %p
       %b Email:
       = @contact.email
+    %p
+      %b Identifier:
+      = @contact.identifier
 
+  .box-body.no-padding
 
-    = link_to 'Edit', account_contacts_path(current_account, @contact)
-    \|
-    = link_to 'Back', account_contacts_path(current_account)
+    %ul.timeline
+      - @contact.tracks.each do |track|
+        %li
+          %i.fa.fa-eye.bg-blue
+          .timeline-item
+            %span.time
+              %i.fa.fa-clock-o
+              = l(track.created_at, format: :short)
+            %h3.timeline-header
+              %a{href: track.page}= track.page_title
+            .timeline-body
+              = track.page
+        / END timeline item

@@ -1,6 +1,9 @@
 class Contact < ActiveRecord::Base
   belongs_to :account
 
-  validates :name, :email, presence: true
-  validates :email, uniqueness: true
+  has_many :tracks
+
+  validates :account_id, :identifier, presence: true
+  validates :email, uniqueness: {scope: :account_id}, unless: 'email.blank?'
+  validates :identifier, uniqueness: {scope: :account_id}
 end

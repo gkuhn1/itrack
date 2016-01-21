@@ -32,3 +32,7 @@ If everything is ok, now you can run server
 `$ rake spec` To run specs
 
 `$ coverage=on rake spec` To run specs and generate coverage report
+
+## Acessing DemoWebsite to track access
+
+1. Open [http://localhost:3000/website/](http://localhost:3000/website/)
