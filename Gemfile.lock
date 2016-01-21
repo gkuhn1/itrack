@@ -132,6 +132,7 @@ GEM
     multi_json (1.11.2)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
+    pg (0.18.4)
     polyamorous (1.1.0)
       activerecord (>= 3.0)
     pry (0.10.3)
@@ -324,6 +325,7 @@ DEPENDENCIES
   jquery-turbolinks
   kaminari
   less-rails (= 2.7.1)
+  pg
   pry (= 0.10.3)
   pry-doc (= 0.8.0)
   pry-nav (= 0.2.4)
