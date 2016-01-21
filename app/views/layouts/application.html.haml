@@ -17,13 +17,13 @@
       %script{src: "https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"}
       %script{src: "https://oss.maxcdn.com/respond/1.4.2/respond.min.js"}
 
+    = javascript_include_tag 'application', 'data-turbolinks-track' => false
     %script{src: "//dev-itrack.herokuapp.com/assets/iTrackClient-80c6fa169060792c356e2f62fe3a3706aaecebdee076981f72d8916bb62a6ca3.js", 'data-turbolinks-track': false}
     :javascript
       window.iTrackClient.configure({
         publisher: "OKacPNAcTloiRPlM_uH5kA"
       })
 
-    = javascript_include_tag 'application', 'data-turbolinks-track' => false
     = csrf_meta_tags
   / ADD THE CLASS fixed TO GET A FIXED HEADER AND SIDEBAR LAYOUT
   / the fixed layout is not compatible with sidebar-mini
