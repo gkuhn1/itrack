@@ -4,13 +4,13 @@
 [![CircleCI status](https://circleci.com/gh/gkuhn1/itrack/tree/master.svg?style=shield)](https://circleci.com/gh/gkuhn1/itrack)
 
 
-This is a [Rails](http://rubyonrails.org/) application built to track user activity throw pages.
+This is a [Rails](http://rubyonrails.org/) application built to track user activity through pages.
 
 ## Dependências
 
 To run this project you should install:
 
-* Ruby 2.3.0 - Você pode usar [RVM](http://rvm.io)
+* Ruby 2.3.0 - You can use [RVM](http://rvm.io)
 
 ## Project Setup
 
@@ -39,4 +39,10 @@ If everything is ok, now you can run server
 
 ## Acessing DemoWebsite to track access
 
-1. Open [http://localhost:3000/website/](http://localhost:3000/website/)
+1. Open [https://dev-itrack.herokuapp.com/website/](https://dev-itrack.herokuapp.com/website/)
+
+## Acessing Demo iTrack
+
+1. Open [https://dev-itrack.herokuapp.com/](https://dev-itrack.herokuapp.com/)
+2. Basic Login: admin
+3. Basic password: pwd

@@ -34,6 +34,10 @@
     / sidebar menu: : style can be found in sidebar.less
     %ul.sidebar-menu
       %li.header ACCOUNT NAVIGATION
+      %li{class: controller_name == "accounts" ? "active" : ""}
+        %a{href: accounts_path}
+          %i.fa.fa-book
+          %span Accounts
       - Account.all.each do |account|
         %li.treeview{class: (account == current_account ? "active" : "")}
           %a{:href => "#"}
