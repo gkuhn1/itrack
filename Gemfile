@@ -5,7 +5,8 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.5'
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development, :test
+gem 'pg', group: :production
 # Use LESS for stylesheets
 gem 'less-rails', '2.7.1'
 # Use Uglifier as compressor for JavaScript assets
